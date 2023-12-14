@@ -1,0 +1,51 @@
+.contact-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 4.2rem;
+}
+.contact-form form {
+  position: relative;
+  width: 600px;
+}
+form input,
+form textarea {
+  width: 100%;
+  padding: 20px;
+  border: none;
+  outline: none;
+  box-shadow: 0 0 5px var(--clr-hero-only);
+  background-color: #2d343f;
+  color: var(--clr-text-only);
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+form input::placeholder,
+form textarea::placeholder {
+  color: var(--clr-other-wanted);
+  font-size: 15px;
+}
+form .send-btn {
+  display: inline-block;
+  padding: 11px 26px;
+  background: var(--clr-hero-only);
+  color: var(--clr-bg-color);
+  border: 2px solid var(--clr-hero-only);
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  transition: all 0.5s ease;
+  width: 30%;
+}
+form .send-btn:hover {
+  background: transparent;
+  color: var(--clr-hero-only);
+  box-shadow: 0 0 20px var(--clr-hero-only);
+  cursor: pointer;
+}
+@media screen and (max-width: 428px) and (max-width: 470px) {
+  form .send-btn {
+    width: 40%;
+    padding: 11px 10px;
+  }
+}

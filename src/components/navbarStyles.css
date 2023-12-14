@@ -1,0 +1,105 @@
+/* Google font Inter linking */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  text-decoration: none;
+  list-style: none;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --clr-text-only: #fff;
+  --clr-bg-color: #1b1f24;
+  /* --clr-bg-color: black; */
+  --clr-another-bg: #22282f;
+  /* --clr-hero-only: #13bbff; */
+  --clr-hero-only: #c50961;
+  --clr-other-wanted: #c3cad5;
+  --fontmain-h1: 4.5rem;
+  --fontmain-h2: 2.9rem;
+  --fontmain-para: 1rem;
+  --light-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  --dark-shadow: 0px 5px 15px rgba(0, 0, 0, 0.4);
+}
+body {
+  /* font-family: "Montserrat", sans-serif;
+    min-width: 100vh;
+    min-height: 100vh;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column; */
+  color: var(--clr-text-only);
+  background-color: var(--clr-bg-color);
+}
+.navBar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 16%;
+  background: transparent;
+  transition: all 0.5s ease;
+}
+.logo {
+  font-size: 36px;
+  color: var(--clr-text-only);
+  font-weight: 600;
+}
+.clr-for-span {
+  color: var(--clr-hero-only);
+}
+.nav-list {
+  display: flex;
+}
+.nav-list a {
+  font-size: var(--fontmain-para);
+  font-weight: 500;
+  color: var(--clr-other-wanted);
+  margin-left: 40px;
+  transition: all 0.5s ease;
+}
+.nav-list a:hover {
+  color: var(--clr-hero-only);
+  text-shadow: 3px 3px 20px var(--clr-hero-only),
+    -2px 1px 30px var(--clr-text-only);
+}
+#icon-menu {
+  font-size: 35px;
+  z-index: 2000;
+  cursor: pointer;
+  display: none;
+}
+.nav-btn {
+  display: inline-block;
+  padding: 11px 26px;
+  background: transparent;
+  color: var(--clr-hero-only);
+  border: 2px solid var(--clr-hero-only);
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  transition: all 0.5s ease;
+}
+.nav-btn:hover {
+  background: var(--clr-hero-only);
+  color: var(--clr-bg-color);
+  box-shadow: 0 0 20px var(--clr-hero-only);
+  transform: scale(1.1);
+}
+section {
+  padding: 110px 16% 90px;
+}
+.navBar.sticky {
+  background: var(--clr-bg-color);
+  box-shadow: 0.1rem 0.1rem rgba(0, 0, 0, 0.2);
+  padding: 16px 16%;
+}

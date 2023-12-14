@@ -1,0 +1,80 @@
+.hero-section {
+  height: 100vh;
+  width: 100%;
+  background: url(../images/myimg7.jpg);
+  background-position: top right;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.content-div h4 {
+  font-size: 1.6rem;
+}
+.content-div h1 {
+  font-size: var(--fontmain-h1);
+  font-weight: 900;
+  margin: 20px 0px 20px;
+  line-height: 1.2;
+}
+.content-div p {
+  font-size: var(--fontmain-para);
+  font-weight: 400;
+  width: 620px;
+  max-width: 100%;
+  color: var(--clr-other-wanted);
+  line-height: 30px;
+  margin-bottom: 15px;
+}
+.social-link {
+  margin-bottom: 40px;
+}
+.social-link i {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  color: var(--clr-hero-only);
+  border-radius: 50%;
+  backdrop-filter: brightness(88%);
+  font-size: 20px;
+  margin-right: 17px;
+  box-shadow: 0 0 20px transparent;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+.social-link i:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px var(--clr-hero-only);
+}
+.btn {
+  display: inline-block;
+  padding: 11px 26px;
+  background: var(--clr-hero-only);
+  color: var(--clr-bg-color);
+  border: 2px solid var(--clr-hero-only);
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  transition: all 0.5s ease;
+}
+.btn:hover {
+  background: transparent;
+  color: var(--clr-hero-only);
+  box-shadow: 0 0 20px var(--clr-hero-only);
+}
+.btn-download {
+  background: transparent;
+  color: var(--clr-hero-only);
+  border: 2px solid var(--clr-hero-only);
+  margin-left: 15px;
+  transition: all 0.5s ease;
+}
+.btn-download:hover {
+  background: var(--clr-hero-only);
+  color: var(--clr-bg-color);
+}
+.clr-for-span {
+  color: var(--clr-hero-only);
+}
