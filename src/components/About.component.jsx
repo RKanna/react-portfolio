@@ -13,13 +13,14 @@ const About = () => {
         </h2>
         <div className="experience">
           <p className="expertize">
-            Experience <span className="clr-for-span">6 Months</span>
+            Experience: <span className="clr-for-span">6 Months</span>
           </p>
           <p className="expertize">
-            Specialty <span className="clr-for-span">HTML, CSS, Js, React</span>
+            Specialty:{" "}
+            <span className="clr-for-span">HTML, CSS, Js, React</span>
           </p>
           <p className="expertize">
-            Address
+            Address:
             <span className="clr-for-span">Jaganathan Nagar, Coimbatore</span>
           </p>
           <p className="expertize">
