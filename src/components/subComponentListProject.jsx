@@ -1,14 +1,18 @@
 import "./listProjectStyles.css";
-const SubListingProjects = ({ imgSrc, heading, subHeading }) => {
+const SubListingProjects = ({ imgSrc, heading, subHeadingURL, gitHubLink }) => {
   return (
     <div className="row">
       <img src={imgSrc} alt="" />
       <div className="main-row">
         <div className="row-text">
-          <h5>{subHeading}</h5>
+          <a href={subHeadingURL}>
+            <h5>Live Project Link</h5>
+          </a>
         </div>
         <div className="row-icon">
-          <i className="ri-github-fill"></i>
+          <a href={gitHubLink}>
+            <i className="ri-github-fill"></i>
+          </a>
         </div>
       </div>
       <h4>{heading}</h4>

@@ -7,6 +7,8 @@ import Services from "./components/Services.component";
 import ProjectList from "./components/ListProject.component";
 import Contact from "./components/Contact.component";
 import Footer from "./components/Footer.component";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -15,6 +17,18 @@ function App() {
     <>
       <Navbar />
       <Hero />
+      <ToastContainer
+        position="bottom-center"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="dark"
+      />
       <About />
       <Services />
       <ProjectList />

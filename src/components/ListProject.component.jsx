@@ -5,36 +5,38 @@ import { useState, useEffect } from "react";
 const ProjectList = () => {
   const [boxDetails, setBoxDetails] = useState([
     {
-      imgSrc: "./images/show-port.jpg",
-      heading: "Website Development for Dark X",
-      subHeading: "Website Design",
+      imgSrc: "./images/projects/ecom.jpg",
+      heading: "Ecommerce Application",
+      subHeadingURL: "https://final-react-first-project.netlify.app/",
+      gitHubLink: "https://github.com/RKanna/blog-main-project",
+    },
+    {
+      imgSrc: "./images/projects/blog.jpg",
+      heading: "Blog Application",
+      subHeadingURL: "https://blog-shine.netlify.app/",
+      gitHubLink: "https://github.com/RKanna/blog-main-project",
+    },
+    {
+      imgSrc: "./images/projects/movie.jpg",
+      heading: "Movie Database Application",
+      subHeadingURL: "https://movie-app-rho-amber.vercel.app/",
+      gitHubLink: "https://github.com/RKanna/next-movie-app-netlify",
     },
     {
       imgSrc: "./images/show-port.jpg",
       heading: "Website Development for Dark X",
-      subHeading: "Website Design",
+      subHeadingURL: "Website Design",
     },
     {
       imgSrc: "./images/show-port.jpg",
       heading: "Website Development for Dark X",
-      subHeading: "Website Design",
-    },
-    {
-      imgSrc: "./images/show-port.jpg",
-      heading: "Website Development for Dark X",
-      subHeading: "Website Design",
-    },
-    {
-      imgSrc: "./images/show-port.jpg",
-      heading: "Website Development for Dark X",
-      subHeading: "Website Design",
+      subHeadingURL: "Website Design",
     },
     {
       imgSrc: "./images/turning-head.png",
       heading: "Turning Head Website",
-      subHeading: "Live URL",
+      subHeadingURL: "Live URL",
     },
-    //Space for Further new Data
   ]);
 
   return (
@@ -45,12 +47,13 @@ const ProjectList = () => {
         </h2>
       </div>
       <div className="portfolio-content">
-        {boxDetails.map((box, index) => (
+        {boxDetails.slice(0, 3).map((box, index) => (
           <SubListingProjects
             key={index}
             imgSrc={box.imgSrc}
             heading={box.heading}
-            subHeading={box.subHeading}
+            subHeadingURL={box.subHeadingURL}
+            gitHubLink={box.gitHubLink}
           />
         ))}
       </div>

@@ -58,3 +58,6 @@
   border: 1px solid var(--clr-hero-only);
   transform: translateY(-5px) scale(1.03);
 }
+.logo-service {
+  width: 4rem;
+}
