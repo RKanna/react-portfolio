@@ -13,7 +13,7 @@ const About = () => {
         </h2>
         <div className="experience">
           <p className="expertize">
-            Experience: <span className="clr-for-span">6 Months</span>
+            Experience: <span className="clr-for-span">1 Year</span>
           </p>
           <p className="expertize">
             Specialty:{" "}

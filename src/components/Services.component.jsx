@@ -4,28 +4,27 @@ import "./mediaQueries.css";
 
 const serviceData = [
   {
-    title: "UI/UX Design",
+    title: "Web Developer",
+    // description:
+    //   "Expert in full-stack development, I create responsive websites for seamless user experiences on both mobile and desktop platforms, ensuring optimal functionality and user satisfaction.",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta cupiditate similique voluptate! Vel quos atque sed adipisci illum nisi repellat.",
+      "I engineer responsive full-stack websites for mobile and PC, seamlessly blending functionality and design for a superior cross-platform user experience.",
     downloadLink: "#",
-    image:
-      "https://cdn.pixabay.com/photo/2015/05/19/07/44/browser-773215_1280.png",
+    image: "./images/development.png",
   },
   {
     title: "UI/UX Design",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta cupiditate similique voluptate! Vel quos atque sed adipisci illum nisi repellat.",
+      "I specialize in UI/UX design, bringing ideas to life with Photoshop. Meticulously crafting visually compelling interfaces for seamless and engaging user experiences.",
     downloadLink: "#",
-    image:
-      "https://cdn.pixabay.com/photo/2015/05/19/07/44/browser-773215_1280.png",
+    image: "./images/ux-design.png",
   },
   {
-    title: "UI/UX Design",
+    title: "Logo Design",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta cupiditate similique voluptate! Vel quos atque sed adipisci illum nisi repellat.",
+      "Proficient in Adobe Illustrator, I craft impactful logos. Merging creativity with precision, each design reflects a unique brand identity for lasting visual appeal.",
     downloadLink: "#",
-    image:
-      "https://cdn.pixabay.com/photo/2015/05/19/07/44/browser-773215_1280.png",
+    image: "./images/artist.png",
   },
 ];
 
@@ -43,9 +42,9 @@ const Services = () => {
             <img className="logo-service" src={service.image} alt="" />
             <h3>{service.title}</h3>
             <p>{service.description}</p>
-            <a href={service.downloadLink}>
+            {/* <a href={service.downloadLink}>
               Download Now<i className="ri-arrow-right-line"></i>
-            </a>
+            </a> */}
           </div>
         ))}
       </div>
