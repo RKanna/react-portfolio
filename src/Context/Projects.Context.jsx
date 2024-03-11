@@ -7,8 +7,8 @@ export const ProjectProvider = ({ children }) => {
     {
       imgSrc: "./images/projects/ecom.jpg",
       heading: "Ecommerce Application",
-      subHeadingURL: "https://final-react-first-project.netlify.app/",
-      gitHubLink: "https://github.com/RKanna/blog-main-project",
+      subHeadingURL: "https://ecomfirebase.netlify.app/",
+      gitHubLink: "https://github.com/RKanna/ecom-final-project",
     },
     {
       imgSrc: "./images/projects/blog.jpg",
