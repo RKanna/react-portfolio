@@ -1,4 +1,3 @@
-import { useState } from "react";
 import "./App.css";
 import Navbar from "./components/Navbar.component";
 import Hero from "./components/hero.component";
@@ -11,11 +10,9 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
       <Hero />
       <ToastContainer
         position="bottom-center"
@@ -33,7 +30,7 @@ function App() {
       <Services />
       <ProjectList />
       <Contact />
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }

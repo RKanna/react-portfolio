@@ -2,42 +2,12 @@ import "./listProjectStyles.css";
 import "./mediaQueries.css";
 import SubListingProjects from "./subComponentListProject";
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import { useProjectContext } from "../Context/Projects.Context";
+import { HashLink } from "react-router-hash-link";
+
 const ProjectList = () => {
-  const [boxDetails, setBoxDetails] = useState([
-    {
-      imgSrc: "./images/projects/ecom.jpg",
-      heading: "Ecommerce Application",
-      subHeadingURL: "https://final-react-first-project.netlify.app/",
-      gitHubLink: "https://github.com/RKanna/blog-main-project",
-    },
-    {
-      imgSrc: "./images/projects/blog.jpg",
-      heading: "Blog Application",
-      subHeadingURL: "https://blog-shine.netlify.app/",
-      gitHubLink: "https://github.com/RKanna/blog-main-project",
-    },
-    {
-      imgSrc: "./images/projects/movie.jpg",
-      heading: "Movie Database Application",
-      subHeadingURL: "https://movie-app-rho-amber.vercel.app/",
-      gitHubLink: "https://github.com/RKanna/next-movie-app-netlify",
-    },
-    {
-      imgSrc: "./images/show-port.jpg",
-      heading: "Website Development for Dark X",
-      subHeadingURL: "Website Design",
-    },
-    {
-      imgSrc: "./images/show-port.jpg",
-      heading: "Website Development for Dark X",
-      subHeadingURL: "Website Design",
-    },
-    {
-      imgSrc: "./images/turning-head.png",
-      heading: "Turning Head Website",
-      subHeadingURL: "Live URL",
-    },
-  ]);
+  const { boxDetails } = useProjectContext();
 
   return (
     <section className="main-portfolio" id="portfolio">
@@ -56,6 +26,14 @@ const ProjectList = () => {
             gitHubLink={box.gitHubLink}
           />
         ))}
+      </div>
+      <div className="text-center pt-10">
+        <HashLink
+          className="hover:text-[#c50961] transition-colors duration-300"
+          to={"/All-Projects-Page"}
+        >
+          View All My Projects
+        </HashLink>
       </div>
     </section>
   );

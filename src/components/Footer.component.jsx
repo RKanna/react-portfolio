@@ -1,14 +1,19 @@
 import "./footerStyles.css";
 import "./mediaQueries.css";
+import { HashLink } from "react-router-hash-link";
 const Footer = () => {
+  const currentYear = new Date().getFullYear();
   return (
     <section className="footer">
       <div className="copyright">
-        <p>2023 Kannan, All Rights Reserved.</p>
+        <p>{currentYear} Kannan, All Rights Reserved.</p>
       </div>
-      <a href="#hero" className="scroll-top">
+      {/* <a href="#hero" className="scroll-top">
         <i className="ri-arrow-up-s-fill"></i>
-      </a>
+      </a> */}
+      <HashLink to="/#hero" className="scroll-top">
+        <i className="ri-arrow-up-s-fill"></i>
+      </HashLink>
     </section>
   );
 };

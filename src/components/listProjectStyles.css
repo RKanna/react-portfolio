@@ -28,6 +28,7 @@
   justify-content: space-between;
   margin-bottom: 0.5rem;
 }
+
 .row h5 {
   font-size: 20px;
   font-weight: 600;
@@ -43,6 +44,11 @@
   border-radius: 50%;
   color: var(--clr-text-only);
   background-color: var(--clr-hero-only);
+  transition: color 0.5s ease;
+}
+.row i:hover {
+  color: var(--clr-other-wanted);
+  background-color: var(--clr-another-bg);
 }
 .row h4 {
   font-size: 22px;
@@ -54,4 +60,7 @@
   border: 1px solid var(--clr-hero-only);
   transform: translateY(-5px) scale(1.03);
   cursor: pointer;
+}
+.row-text h5:hover {
+  color: var(--clr-hero-only);
 }
