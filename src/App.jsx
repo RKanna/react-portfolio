@@ -1,6 +1,6 @@
 import "./App.css";
 import Navbar from "./components/Navbar.component";
-import Hero from "./components/hero.component";
+import Hero from "./components/Hero.component";
 import About from "./components/About.component";
 import Services from "./components/Services.component";
 import ProjectList from "./components/ListProject.component";

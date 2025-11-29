@@ -1,6 +1,5 @@
 import SubListingProjects from "./subComponentListProject";
 import { useProjectContext } from "../Context/Projects.Context";
-import { Link } from "react-router-dom";
 
 const Projects = () => {
   const { boxDetails } = useProjectContext();
