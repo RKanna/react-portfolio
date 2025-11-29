@@ -1,8 +1,6 @@
 import { useEffect, useState } from "react";
 import "./navbarStyles.css";
 import "./mediaQueries.css";
-import { Link } from "react-router-dom";
-import { HashLink } from "react-router-hash-link";
 const Navbar = () => {
   const [isSticky, setIsSticky] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -38,9 +36,9 @@ const Navbar = () => {
 
   return (
     <section className={isSticky ? "navBar sticky" : "navBar"} id="nav-bar">
-      <HashLink to="/#hero" className="logo">
+      <a href="#hero" className="logo">
         &lt; Kannan <span className="clr-for-span forX">/&gt;</span>
-      </HashLink>
+      </a>
 
       <div
         className={`bx bx-menu ${isMenuOpen ? "bx-x" : ""}`}
@@ -49,31 +47,28 @@ const Navbar = () => {
       ></div>
       <ul className={`nav-list ${isMenuOpen ? "active" : ""}`}>
         <li>
-          <HashLink to="/#hero">Home</HashLink>
+          <a href="#hero">Home</a>
         </li>
         <li>
-          <HashLink to="/#about">About</HashLink>
+          <a href="#about">About</a>
         </li>
         <li>
-          <HashLink to="/#services">Services</HashLink>
+          <a href="#services">Services</a>
         </li>
         <li>
-          <HashLink to="/#portfolio">Portfolio</HashLink>
+          <a href="#portfolio">Portfolio</a>
         </li>
         <li>
-          <HashLink to="/#blog">Blog</HashLink>
+          <a href="#blog">Blog</a>
         </li>
         <li>
-          <HashLink to="/#contact">Contact</HashLink>
+          <a href="#contact">Contact</a>
         </li>
       </ul>
       <div className="top-nav-btn">
-        {/* <a href="#about" className="nav-btn">
+        <a href="#about" className="nav-btn">
           Contact me
-        </a> */}
-        <HashLink to="/#about" className="nav-btn">
-          Contact me
-        </HashLink>
+        </a>
       </div>
     </section>
   );

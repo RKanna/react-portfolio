@@ -1,0 +1,10 @@
+@import "../src/index.css";
+@import "../src/components/heroStyles.css";
+@import "../src/components/aboutStyles.css";
+@import "../src/components/servicesStyles.css";
+@import "../src/components/listProjectStyles.css";
+@import "../src/components/contactStyles.css";
+@import "../src/components/footerStyles.css";
+@import "../src/components/navbarStyles.css";
+@import "../src/components/mediaQueries.css";
+@import "../src/App.css";

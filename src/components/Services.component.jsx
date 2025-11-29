@@ -10,21 +10,21 @@ const serviceData = [
     description:
       "I engineer responsive full-stack websites for mobile and PC, seamlessly blending functionality and design for a superior cross-platform user experience.",
     downloadLink: "#",
-    image: "./images/development.png",
+    image: "/images/development.png",
   },
   {
     title: "UI/UX Design",
     description:
       "I specialize in UI/UX design, bringing ideas to life with Photoshop. Meticulously crafting visually compelling interfaces for seamless and engaging user experiences.",
     downloadLink: "#",
-    image: "./images/ux-design.png",
+    image: "/images/ux-design.png",
   },
   {
     title: "Logo Design",
     description:
       "Proficient in Adobe Illustrator, I craft impactful logos. Merging creativity with precision, each design reflects a unique brand identity for lasting visual appeal.",
     downloadLink: "#",
-    image: "./images/artist.png",
+    image: "/images/artist.png",
   },
 ];
 

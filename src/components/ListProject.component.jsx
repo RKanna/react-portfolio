@@ -2,9 +2,7 @@ import "./listProjectStyles.css";
 import "./mediaQueries.css";
 import SubListingProjects from "./subComponentListProject";
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 import { useProjectContext } from "../Context/Projects.Context";
-import { HashLink } from "react-router-hash-link";
 
 const ProjectList = () => {
   const { boxDetails } = useProjectContext();
@@ -28,12 +26,12 @@ const ProjectList = () => {
         ))}
       </div>
       <div className="text-center pt-10">
-        <HashLink
+        <a
           className="hover:text-[#c50961] transition-colors duration-300"
-          to={"/All-Projects-Page"}
+          href="/All-Projects-Page"
         >
           View All My Projects
-        </HashLink>
+        </a>
       </div>
     </section>
   );

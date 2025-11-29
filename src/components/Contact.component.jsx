@@ -1,38 +1,40 @@
 import "./contactStyles.css";
 import "./mediaQueries.css";
-import React, { useRef } from "react";
-import emailjs from "@emailjs/browser";
+import React from "react";
 import { toast } from "react-toastify";
 
 const Contact = () => {
-  const form = useRef();
-
-  // const serviceKey = import.meta.env.VITE_SERVICE_KEY;
-  // const templateKey = import.meta.env.VITE_TEMPLATE_KEY;
-  // const publicKey = import.meta.env.VITE_PUBLIC_KEY;
-  // console.log(import.meta.env.VITE_TEMPLATE_ID);
-  // console.log("TEMPLATE_ID:", import.meta.env.TEMPLATE_KEY);
-
-  const sendEmail = (e) => {
+  const sendEmail = async (e) => {
     e.preventDefault();
 
-    emailjs
-      .sendForm(
-        "service_ypp5snk",
-        "template_owt2l9j",
-        form.current,
-        "MdKRUc0TlleoXjB7S"
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-          toast("Email Sent");
-          form.current.reset();
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
+    const formElement = e.target;
+    const formData = new FormData(formElement);
+
+    // Web3Forms required access key
+    formData.append("access_key", "5bad5087-4ee4-4842-b547-b91683e5fe39");
+
+    // Optional extra metadata
+    formData.append("subject", "New message from portfolio contact form");
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData,
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        toast("Email Sent");
+        formElement.reset();
+      } else {
+        console.error("Web3Forms error:", data);
+        toast("Failed to send email. Please try again.");
+      }
+    } catch (error) {
+      console.error("Web3Forms request failed:", error);
+      toast("Failed to send email. Please try again.");
+    }
   };
   return (
     <section className="contact" id="contact">
@@ -42,7 +44,7 @@ const Contact = () => {
         </h2>
       </div>
       <div className="contact-form">
-        <form action="" ref={form} onSubmit={sendEmail}>
+        <form onSubmit={sendEmail}>
           <input
             type="text"
             placeholder="Your Name"
